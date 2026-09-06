@@ -10,6 +10,7 @@ public class PrintEvenNumbers{
     int end  = sc.nextInt();
     
     printEvens(end);
+    printEvens(start, end);
     sc.close();
   }
   

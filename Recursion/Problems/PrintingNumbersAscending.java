@@ -8,6 +8,8 @@ public class PrintingNumbersAscending{
     int end = sc.nextInt();
     int from = 1;
     printNumbers(from, end);
+
+    sc.close();
   }
   
   public static void printNumbers(int start, int end){

@@ -11,7 +11,6 @@ public class SumOfDigitsOfANumber{
   }
   
   public static int sumOfDigits(int num){
-     int sum = 0;
     //base case
     if(num == 0){
       return 0;

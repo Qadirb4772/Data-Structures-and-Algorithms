@@ -6,8 +6,8 @@ public class ReversedTriangle{
     Scanner sc = new Scanner(System.in);
     System.out.print("Enter the total number of rows = ");
     int rows = sc.nextInt();
-    int r = 4, c = 0;
-    printTriangle(r, c);
+    int c = 0;
+    printTriangle(rows, c);
     sc.close();
   }
   

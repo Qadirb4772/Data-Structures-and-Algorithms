@@ -13,8 +13,7 @@ public class ReverseWordsInASentence{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
-    
-  
+    sc.close();  
   }
   
   public static String reverseWords(String sentence) throws NullStringException, EmptyStringException{
