@@ -24,9 +24,6 @@ public class AnagramChecker{
     if(arr.length == 0){
       System.out.println("Array Is Empty!!");
       return sortedStr;
-    }else if(arr == null){
-      System.out.println("Array Is Null!!");
-      return null;
     }
     for(int i = 0; i < arr.length-1; i++){
       int  minIndex = i; 
