@@ -11,6 +11,7 @@ public class MostFrequentCharacter{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static String mostFreqChar(String str) throws NullStringException, EmptyStringException{

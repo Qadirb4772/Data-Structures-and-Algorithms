@@ -7,6 +7,8 @@ public class PrintingNumbersDescending{
     System.out.print("Enter a Number = ");
     int num = sc.nextInt();
     printNumbers(num);
+
+    sc.close();
   }
   
   public static void printNumbers(int n){

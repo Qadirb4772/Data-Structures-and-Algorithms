@@ -16,6 +16,7 @@ public class RunLengthEncoding{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static String encodeString(String str) throws NullStringException, EmptyStringException{

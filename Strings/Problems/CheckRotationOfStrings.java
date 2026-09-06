@@ -19,6 +19,7 @@ public class CheckRotationOfStrings{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static boolean isRotation(String str1, String str2) throws NullStringException, EmptyStringException{

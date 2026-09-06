@@ -11,6 +11,7 @@ public class RemoveExtraSpaces{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static String removeSpaces(String str) throws NullStringException, EmptyStringException{

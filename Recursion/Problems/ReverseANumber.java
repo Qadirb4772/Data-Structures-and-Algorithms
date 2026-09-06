@@ -11,6 +11,7 @@ public class ReverseANumber{
     int reversedNum = reverse(num);
     
     System.out.println("The reversed Number is: "+reversedNum);
+    sc.close();
   }
   
   public static int reverse(int num){

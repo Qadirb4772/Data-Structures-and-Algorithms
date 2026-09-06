@@ -12,6 +12,7 @@ public class CharacterFrequency{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static void charFreq(String str) throws Exception{

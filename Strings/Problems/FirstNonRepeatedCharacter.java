@@ -16,6 +16,7 @@ public class FirstNonRepeatedCharacter{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static char firstNonRepeatedChar(String str) throws NullStringException, EmptyStringException{

@@ -1,7 +1,6 @@
 package Algorithms;
 
 import java.util.*;
-import Problems.*;
 
 public class SnakeCaseToCamelCase{
   public static void main(String[] args){
@@ -14,6 +13,7 @@ public class SnakeCaseToCamelCase{
     }catch(Exception ex){
       System.out.println(ex.getMessage());
     }
+    sc.close();
   }
   
   public static String changeCase(String str) throws Exception{
