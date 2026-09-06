@@ -125,6 +125,37 @@ class CLinkedList{
         node.next.next = newNode;
     }
 
+    public void addBefore(int targetData, int data){
+        Node newNode = new Node(data);
+        Node n = head;
+        Node search = searchNode(targetData);
+        if(search == null){
+            System.out.println("No Such node with data: "+targetData+" exists");
+            return;
+        }
+        if(n.data == targetData){
+            addFront(newNode.data);
+            return;
+        }
+        while(n.next.data != targetData){
+            n = n.next;
+        }
+        if(n != head){
+            newNode.next = n.next;
+            n.next = newNode;
+        }else{
+            addBack(newNode.data);
+        }
+    }
+
+    public void updateNode(int data, int newData){
+        Node search = searchNode(data);
+        if(search == null){
+            System.out.println("No Such node with data: "+data+" exists");
+            return;
+        }
+        search.data = newData;
+    }
     private class Node{
         int data;
         Node next;
@@ -148,6 +179,8 @@ public class CircularLinkedListWithoutTail {
         list.dislayNodes();
 
         list.addAfter(18, 13);
+        list.addBefore(12, 11);
+        list.updateNode(19, 10);
         list.dislayNodes();
        
     }
