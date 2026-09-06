@@ -13,7 +13,7 @@ class Student{
   }
   
   public Student(String name, int rollNo){
-    if(name != null || !name.trim().isEmpty() && rollNo > 0){
+    if(name != null && !name.trim().isEmpty() && rollNo > 0){
       this.name = name;
       this.rollNo = rollNo;
     }else {
@@ -32,7 +32,7 @@ class Student{
   }
   
   public void setName(String name){
-    if(name != null || !name.trim().isEmpty()){
+    if(name != null && !name.trim().isEmpty()){
       this.name = name;
     }else {
       System.out.println("Not a valid Name");
