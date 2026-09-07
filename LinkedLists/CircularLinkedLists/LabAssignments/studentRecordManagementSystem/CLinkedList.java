@@ -146,45 +146,39 @@ public class Node{
     n.next = n.next.next;
   }
   
+ 
   public void addStudentAfter(int id, Student std){
-    int index = 0;
-
     Node newNode = new Node(std);
 
-    Node n = head;
-    while(n.getStudent().getStudentId() != id){
-      ++index;
-      n = n.next;
-    }
-
     Node node = head;
-    for(int i = 0; i < index; i++){
+    if(node.getStudent().getStudentId() == id){
+      newNode.next = node.next;
+      node.next = newNode;
+      
+      return;
+    }
+    while(node.next != head && node.next.getStudent().getStudentId() != id){
       node = node.next;
     }
-    newNode.next = node.next;
-    node.next = newNode;
+    newNode.next = node.next.next;
+    node.next.next = newNode;
   }
   
 
   public void addStudentBefore(int id, Student std){
-    int index = -1;
-
     Node newNode = new Node(std);
 
-    Node n = head;
-    while(n.getStudent().getStudentId() != id){
-      ++index;
-      n = n.next;
-    }
-
     Node node = head;
-    for(int i = 0; i < index; i++){
+    if(node.getStudent().getStudentId() == id){
+      addStudentFront(std);
+      return;
+    }
+    while(node.next != head && node.next.getStudent().getStudentId() != id){
       node = node.next;
     }
     newNode.next = node.next;
     node.next = newNode;
   }
-  
 }
 
 
