@@ -15,5 +15,23 @@ public class LinkedListDemo {
 
         myList.deleteFront();
         myList.displayForward();
+
+        myList.deleteBack();
+        myList.displayForward();
+
+        if(myList.searchNode(48)){
+            System.out.println("Node Found");
+        }else{
+            System.out.println("Node not found");
+        }
+
+        myList.deleteNode(20);
+        myList.displayForward();
+        myList.displayBackward();
+
+         myList.updateNode(14, 4);
+         myList.displayForward();
+         //myList.displayBackward();
+
     }
 }
