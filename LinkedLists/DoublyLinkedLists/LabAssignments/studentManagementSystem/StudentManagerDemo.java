@@ -12,7 +12,7 @@ public class StudentManagerDemo {
         record.addStudentFront(std1);
         record.addStudentBack(std0);
         record.addStudentFront(std2);
-        record.addStudentBefore(130, std3);
+        record.updateStudent(130, std3);
 
         record.displayStudentsForward();
 

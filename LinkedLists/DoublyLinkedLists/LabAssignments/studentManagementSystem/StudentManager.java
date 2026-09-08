@@ -148,6 +148,17 @@ public class StudentManager {
     }
 
     //method for updating student
+    public void updateStudent(int id, Student std){
+        Node node = head;
+        while(node != null){
+            if(node.student.getStudentId() == id){
+                node.student = std;
+                return;
+            }
+            node = node.next;
+        }
+        System.out.println("No student with ID: "+id+" exists here:");
+    }
     //method for displaying students forward
     public void displayStudentsForward(){
         Node node = head;
