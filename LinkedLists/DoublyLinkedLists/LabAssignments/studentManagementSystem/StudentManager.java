@@ -95,6 +95,59 @@ public class StudentManager {
         System.out.println("No Student with ID: "+stdId+" exists in the list");
     }
 
+    //method for adding student after a particular student
+    public void addStudentAfter(int targetId, Student std){
+        Node newNode = new Node(std);
+        if(tail.student.getStudentId() == targetId){
+            addStudentBack(std);
+            return;
+        }
+        Node node = head;
+        Node n = null;
+        while(node != null){
+            if(node.student.getStudentId() == targetId){
+                n = node;
+                break;
+            }
+            node = node.next;
+        }
+        if(n == null){
+            System.out.println("There is no student with ID: "+targetId);
+            return;
+        }
+        newNode.next = n.next;
+        newNode.next.prev = newNode;
+        n.next = newNode;
+        newNode.prev = n;
+    }
+
+    //method for adding student before a particular student
+    public void addStudentBefore(int targetId, Student std){
+        Node newNode = new Node(std);
+        Node node = head;
+        if(node.student.getStudentId() == targetId){
+            addStudentFront(std);
+            return;
+        }
+        Node n  = null;
+        while(node.next != null){
+            if(node.next.student.getStudentId() == targetId){
+                n = node.next;
+                break;
+            }
+            node = node.next;
+        }
+        if(n == null){
+            System.out.println("There is no student with ID: "+targetId);
+            return;
+        }
+        newNode.next = n;
+        newNode.prev = n.prev ;
+        n.prev.next = newNode;
+        n.prev = newNode;
+    }
+
+    //method for updating student
     //method for displaying students forward
     public void displayStudentsForward(){
         Node node = head;

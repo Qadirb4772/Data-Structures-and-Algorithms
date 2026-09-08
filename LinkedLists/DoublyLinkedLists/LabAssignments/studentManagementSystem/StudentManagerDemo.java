@@ -12,20 +12,20 @@ public class StudentManagerDemo {
         record.addStudentFront(std1);
         record.addStudentBack(std0);
         record.addStudentFront(std2);
-        record.addStudentBack(std3);
+        record.addStudentBefore(130, std3);
 
         record.displayStudentsForward();
 
-        record.deleteStudentFront();
-        record.displayStudentsForward();
+        // record.deleteStudentFront();
+        // record.displayStudentsForward();
 
-        record.deleteStudentBack();
-        record.displayStudentsForward();
+        // record.deleteStudentBack();
+        // record.displayStudentsForward();
 
-        record.deleteStudent(123);
-        record.displayStudentsForward();
+        // record.deleteStudent(123);
+        // record.displayStudentsForward();
 
-        record.searchStudent(12);
+        // record.searchStudent(12);
 
     }
 }
