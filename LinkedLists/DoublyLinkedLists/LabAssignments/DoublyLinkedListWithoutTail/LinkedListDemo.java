@@ -32,6 +32,7 @@ public class LinkedListDemo {
          myList.updateNode(14, 4);
          myList.displayForward();
          //myList.displayBackward();
+         
 
     }
 }
