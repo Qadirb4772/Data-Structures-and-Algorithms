@@ -80,8 +80,19 @@ public class StudentManager {
         }else{
             System.out.println("No Student exists with ID: "+stdId);
         }
+    }
 
-
+    //method for searching student
+    public void searchStudent(int stdId){
+        Node node = head;
+        while(node != null){
+            if(node.student.getStudentId() == stdId){
+                node.student.displayInfo();
+                return;
+            }
+            node = node.next;
+        }
+        System.out.println("No Student with ID: "+stdId+" exists in the list");
     }
 
     //method for displaying students forward
