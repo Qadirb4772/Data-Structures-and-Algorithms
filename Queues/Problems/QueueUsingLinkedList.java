@@ -20,7 +20,6 @@ class Queue{
             if(front == null){
                 front = node;
                 rear = node;
-                return;
             }else{
                 node.next = front;
                 front = node;
@@ -41,6 +40,8 @@ class Queue{
             node.next = null;
             rear = node;
             --size;
+        }else{
+            System.out.println("Queue is Empty!!");
         }
     }
 
@@ -66,8 +67,13 @@ class Queue{
     }
 
     //method for getting the peek element
-
+    public int peek(){
+        return front.data;
+    }
     //method for getting the size of the queue
+    public int size(){
+        return this.size;
+    }
     private class Node{
         private int data;
         private Node next;
@@ -92,5 +98,8 @@ public class QueueUsingLinkedList {
         queue.displayQueue();
 
         System.out.println(queue.isFull());
+
+        System.out.println("Size of the queue is: "+queue.size());
+        System.out.println("Peek of the queue is: "+queue.peek());
     }
 }
